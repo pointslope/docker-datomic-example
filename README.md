@@ -10,6 +10,10 @@ A sample Dockerfile and configuration demonstrating the use of the [pointslope/d
 3. Execute `make` on the command line to build your docker image
 4. Execute `make start` on the command line to start your Datomic Pro Starter Edition container
 
+##  Obligatory Word of Caution
+
+This is a **sample** repository, crafted for a specific, didactic purpose. Please think carefully about the security and licensing issues associated with storing sensitive information in configuration files and use your best judgement before pushing sensitive information to hosted repositories. 
+
 ##  The MIT License (MIT)
 
 Copyright (c) 2015 Point Slope, LLC
