@@ -1,7 +1,7 @@
 TAG?=$(shell ./datomic-version)
 DOCKER_IMAGE=example/docker-datomic-example:$(TAG)
 
-.PHONY: all clean run info
+.PHONY: all clean start info
 
 all: Dockerfile
 	docker build -t $(DOCKER_IMAGE) .
