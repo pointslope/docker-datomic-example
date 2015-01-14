@@ -1,5 +1,5 @@
 TAG?=$(shell ./datomic-version)
-DOCKER_IMAGE=example/docker-datomic-example:$(TAG)
+DOCKER_IMAGE=pointslope/docker-datomic-example:$(TAG)
 
 .PHONY: all clean start info
 
