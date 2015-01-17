@@ -1,4 +1,4 @@
-db:
+datomicdb:
   build: datomic-pro-starter
   ports:
     - "4336:4336"
@@ -7,11 +7,11 @@ db:
 waiter:
   image: aanand/wait
   links:
-    - db
+    - datomicdb
 console:
   build: datomic-console
   ports:
     - "9000:9000"
   links:
     - waiter
-    - db    
+    - datomicdb
