@@ -9,10 +9,12 @@ A sample Dockerfile and configuration demonstrating the use of the [pointslope/d
 2. Edit the `.credentials` files in *both* the **datomic-console** and **datomic-pro-starter** folders file adding your Datomic portal username and download key (sorry, but Docker doesn't support symlinking)
 3. Add your Datomic Pro Starter Edition license key to the `datomic-pro-starter/config/dev-transactor.properties` file
 4. Run `fig up`
+5. The console will be available on port 9000 of your docker host's
+   address. Use `echo $DOCKER_HOST` to see what that is. E.g. [http://192.168.59.103:9000/browse](http://192.168.59.103:9000/browse)
 
 ##  Obligatory Word of Caution
 
-This is a **sample** repository, crafted for a specific, didactic purpose. Please think carefully about the security and licensing issues associated with storing sensitive information in configuration files and use your best judgement before pushing sensitive information to hosted repositories. 
+This is a **sample** repository, crafted for a specific, didactic purpose. Please think carefully about the security and licensing issues associated with storing sensitive information in configuration files and use your best judgement before pushing sensitive information to hosted repositories.
 
 ##  The MIT License (MIT)
 
