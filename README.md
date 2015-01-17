@@ -1,14 +1,14 @@
 # docker-datomic-example
 
-A sample Dockerfile and configuration demonstrating the use of the [pointslope/docker-datomic](https://registry.hub.docker.com/u/pointslope/docker-datomic/) Docker "base" image.
+A sample Dockerfile and configuration demonstrating the use of the [pointslope/datomic-pro-starter](https://registry.hub.docker.com/u/pointslope/datomic-pro-starter/) Docker "base" image.
 
 ## Getting Started
 
-0. Register for a free Datomic Pro Starter Edition license at [my.datomic.com](https://my.datomic.com/account/create)
-1. Edit the `.credentials` file adding your Datomic portal username and download key
-2. Add your Datomic Pro Starter Edition license key to the `config/dev-transactor.properties`
-3. Execute `make` on the command line to build your docker image
-4. Execute `make start` on the command line to start your Datomic Pro Starter Edition container
+0. Install [fig][http://fig.sh]
+1. Register for a free Datomic Pro Starter Edition license at [my.datomic.com](https://my.datomic.com/account/create)
+2. Edit the `.credentials` file adding your Datomic portal username and download key
+3. Add your Datomic Pro Starter Edition license key to the `config/dev-transactor.properties`
+4. Run `fig up`
 
 ##  Obligatory Word of Caution
 

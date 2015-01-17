@@ -1,0 +1,17 @@
+db:
+  build: datomic-pro-starter
+  ports:
+    - "4336:4336"
+    - "4335:4335"
+    - "4334:4334"
+waiter:
+  image: aanand/wait
+  links:
+    - db
+console:
+  build: datomic-console
+  ports:
+    - "9000:9000"
+  links:
+    - waiter
+    - db    
