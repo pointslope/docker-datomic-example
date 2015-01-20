@@ -4,6 +4,8 @@ datomicdb:
     - "4336:4336"
     - "4335:4335"
     - "4334:4334"
+  volumes:
+    - "/data"
 waiter:
   image: aanand/wait
   links:
