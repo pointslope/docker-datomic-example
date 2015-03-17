@@ -9,7 +9,7 @@ fi
 
 
 cat <<EOF
-To load the mbrainz data, replace the volumes definition in fig.yml under datomicdb with the following version which mounts the current directory:
+To load the mbrainz data, replace the volumes definition in docker-compose.yml under datomicdb with the following version which mounts the current directory:
 
   volumes:
     - "$(pwd):/data"

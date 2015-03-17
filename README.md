@@ -4,11 +4,11 @@ A sample Dockerfile and configuration demonstrating the use of the [pointslope/d
 
 ## Getting Started
 
-0. Install [fig](http://fig.sh) (Mac users: brew install fig)
+0. Install [docker-compose](https://docs.docker.com/compose/install/) (Mac users: brew install docker-compose)
 1. Register for a free Datomic Pro Starter Edition license at [my.datomic.com](https://my.datomic.com/account/create)
 2. Edit the `.credentials` files in *both* the **datomic-console** and **datomic-pro-starter** folders file adding your Datomic portal username and download key (sorry, but Docker doesn't support symlinking)
 3. Add your Datomic Pro Starter Edition license key to the `datomic-pro-starter/config/dev-transactor.properties` file
-4. Run `fig up`
+4. Run `docker-compose up`
 5. The console will be available on port 9000 of your docker host's
    address. Use `echo $DOCKER_HOST` to see what that is. E.g. [http://192.168.59.103:9000/browse](http://192.168.59.103:9000/browse)
 
@@ -22,8 +22,8 @@ If you're following along with the Day of Datomic [training videos](http://www.d
 
 1. In your terminal, navigate to the `datomic-pro-starter` folder under this project
 2. Run the `./download-data.sh` script to extract the Music Brainz data locally
-3. Edit the `fig.yml` file as directed by the download script (discussed below)
-4. Run `fig ps` to discover the name of your Datomic container (mine is **dockerdatomicexample\_datomicdb\_1**)
+3. Edit the `docker-compose.yml` file as directed by the download script (discussed below)
+4. Run `docker-compose ps` to discover the name of your Datomic container (mine is **dockerdatomicexample\_datomicdb\_1**)
 5. Execute the following command:
 
     docker exec &lt;container&gt; restore-db &lt;storage&gt;
