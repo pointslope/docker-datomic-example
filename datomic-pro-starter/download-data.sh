@@ -1,6 +1,6 @@
 #!/bin/bash
 if [ ! -f mbrainz.tar ]; then
-    wget http://s3.amazonaws.com/mbrainz/datomic-mbrainz-1968-1973-backup-2014-11-17.tar -O mbrainz.tar
+    wget http://s3.amazonaws.com/mbrainz/datomic-mbrainz-1968-1973-backup-2015-02-11.tar -O mbrainz.tar
 fi
 
 if [ ! -d mbrainz-1968-1973 ]; then
