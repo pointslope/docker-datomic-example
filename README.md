@@ -10,7 +10,7 @@ A sample Dockerfile and configuration demonstrating the use of the [pointslope/d
 3. Add your Datomic Pro Starter Edition license key to the `datomic-pro-starter/config/dev-transactor.properties` file
 4. Run `docker-compose up`
 5. The console will be available on port 9000 of your docker host's
-   address. Use `echo $DOCKER_HOST` to see what that is. E.g. [http://192.168.59.103:9000/browse](http://192.168.59.103:9000/browse)
+   address. Use `echo $DOCKER_HOST` or `docker-machine env <local-docker-machine-vm-name>`to see what that is. E.g. [http://192.168.59.103:9000/browse](http://192.168.59.103:9000/browse)
 
 ##  Obligatory Word of Caution
 
@@ -34,7 +34,7 @@ where &lt;container&gt; is the name of the container from step 4 above, and &lt;
 
 ### Discussion
 
-The Music Brainz data loading automation described above relies on a **VOLUME** mount at `/data` in the Docker container with the Music Brainz dataset already extracted. If you are using **boot2docker** and this repository is checked out somewhere under `/Users`, the path to this folder [should be mirrored](https://github.com/boot2docker/boot2docker#user-content-virtualbox-guest-additions) in the **boot2docker** VM.
+The Music Brainz data loading automation described above relies on a **VOLUME** mount at `/data` in the Docker container with the Music Brainz dataset already extracted. If you are using **docker-machine** and this repository is checked out somewhere under `/Users`, the path to this folder [should be mirrored](https://github.com/boot2docker/boot2docker#user-content-virtualbox-guest-additions) in the **Virtual Box/Docker Machine** VM.
 
 We've found this to be the most reliable way to load the data into the database container, as well as the most conservative of bandwidth. Since we're storing the data locally and mounting it with the **VOLUME** command, you can destroy and recreate the Datomic container without having to download the data each time.
 
