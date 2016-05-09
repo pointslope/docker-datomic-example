@@ -1,4 +1,4 @@
-FROM pointslope/datomic-console:0.9.5344
-# the hostname 'db' is created by linking a Datomic Pro Start container with the db alias
+FROM pointslope/datomic-console:0.9.5359
+# the hostname 'db' is created by linking a Datomic Pro Starter container with the db alias
 # docker-compose does this for us, but it can be done with docker run --link
 CMD ["dev", "datomic:dev://datomicdb:4334"]
