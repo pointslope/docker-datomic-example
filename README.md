@@ -2,9 +2,16 @@
 
 A sample Dockerfile and configuration demonstrating the use of the [pointslope/datomic-pro-starter](https://registry.hub.docker.com/u/pointslope/datomic-pro-starter/) Docker "base" image. **NEW**: Now also runs a linked container running Datomic Console!
 
+## Prerequisites
+
+You'll need Docker and Docker Compose. The easiest way to get these is:
+
+* Linux - use your distribution's package manager
+* [Docker for Mac (Beta)](https://docs.docker.com/engine/installation/mac/#docker-for-mac)
+* [Docker for Windows (Beta)](https://docs.docker.com/engine/installation/windows/#docker-for-windows)
+
 ## Getting Started
 
-0. Install [docker-compose](https://docs.docker.com/compose/install/) (Mac users: `brew install docker-compose`)
 1. Register for a free Datomic Pro Starter Edition license at [my.datomic.com](https://my.datomic.com/account/create)
 2. Edit the `.credentials` files in *both* the **datomic-console** and **datomic-pro-starter** folders file adding your Datomic portal username and download key (sorry, but Docker doesn't support symlinking)
 3. Add your Datomic Pro Starter Edition license key to the `datomic-pro-starter/config/dev-transactor.properties` file
