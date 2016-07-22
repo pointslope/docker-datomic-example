@@ -1,9 +1,10 @@
 # docker-datomic-example
 
-A sample Dockerfile and configuration demonstrating the use of the
+This repository contains a sample Dockerfile and configuration demonstrating the use of the
 [pointslope/datomic-pro-starter](https://registry.hub.docker.com/u/pointslope/datomic-pro-starter/)
-Docker "base" image. **NEW**: Now also runs a linked container running
-Datomic Console!
+Docker "base" image to run [Datomic Pro Starter Edition](http://www.datomic.com/) and the Datomic Console
+application in a pair of Docker containers. The scripts to download and import the Music Brainz data
+make this the cleanest and fastest way to start learning Datomic.
 
 ## Prerequisites
 
