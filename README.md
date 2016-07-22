@@ -1,6 +1,9 @@
 # docker-datomic-example
 
-A sample Dockerfile and configuration demonstrating the use of the [pointslope/datomic-pro-starter](https://registry.hub.docker.com/u/pointslope/datomic-pro-starter/) Docker "base" image. **NEW**: Now also runs a linked container running Datomic Console!
+A sample Dockerfile and configuration demonstrating the use of the
+[pointslope/datomic-pro-starter](https://registry.hub.docker.com/u/pointslope/datomic-pro-starter/)
+Docker "base" image. **NEW**: Now also runs a linked container running
+Datomic Console!
 
 ## Prerequisites
 
@@ -21,11 +24,19 @@ You'll need Docker and Docker Compose. The easiest way to get these is:
 
 ##  Obligatory Word of Caution
 
-This is a **sample** repository, crafted for a specific, didactic purpose. Please think carefully about the security and licensing issues associated with storing sensitive information in configuration files and use your best judgement before pushing sensitive information to hosted repositories.
+This is a **sample** repository, crafted for a specific, didactic
+purpose. Please think carefully about the security and licensing
+issues associated with storing sensitive information in configuration
+files and use your best judgement before pushing sensitive information
+to hosted repositories.
 
 ## Loading Music Brainz Sample Data Set (Optional)
 
-If you're following along with the Day of Datomic [training videos](http://www.datomic.com/training.html), you will want to load the Music Brainz data from 1968-1973 into your Datomic container. As you might have guessed, we've added a couple of bits to help make that easier for you.
+If you're following along with the Day of Datomic
+[training videos](http://www.datomic.com/training.html), you will want
+to load the Music Brainz data from 1968-1973 into your Datomic
+container. As you might have guessed, we've added a couple of bits to
+help make that easier for you.
 
 1. In your terminal, navigate to the `datomic-pro-starter` folder under this project
 2. Run the `./download-data.sh` script to extract the Music Brainz data locally
@@ -35,15 +46,28 @@ If you're following along with the Day of Datomic [training videos](http://www.d
 
     docker exec &lt;container&gt; restore-db &lt;storage&gt;
 
-where &lt;container&gt; is the name of the container from step 4 above, and &lt;storage&gt; is the type of Datomic storage you're using (dev if you've used the default properties file). The command above might looks like this on my machine:
+where &lt;container&gt; is the name of the container from step 4
+above, and &lt;storage&gt; is the type of Datomic storage you're using
+(dev if you've used the default properties file). The command above
+might looks like this on my machine:
 
     docker exec dockerdatomicexample_datomicdb_1 restore-db dev
 
 ### Discussion
 
-The Music Brainz data loading automation described above relies on a **VOLUME** mount at `/data` in the Docker container with the Music Brainz dataset already extracted. If you are using **docker-machine** and this repository is checked out somewhere under `/Users`, the path to this folder [should be mirrored](https://github.com/boot2docker/boot2docker#user-content-virtualbox-guest-additions) in the **Virtual Box/Docker Machine** VM.
+The Music Brainz data loading automation described above relies on a
+**VOLUME** mount at `/data` in the Docker container with the Music
+Brainz dataset already extracted. If you are using **docker-machine**
+and this repository is checked out somewhere under `/Users`, the path
+to this folder
+[should be mirrored](https://github.com/boot2docker/boot2docker#user-content-virtualbox-guest-additions)
+in the **Virtual Box/Docker Machine** VM.
 
-We've found this to be the most reliable way to load the data into the database container, as well as the most conservative of bandwidth. Since we're storing the data locally and mounting it with the **VOLUME** command, you can destroy and recreate the Datomic container without having to download the data each time.
+We've found this to be the most reliable way to load the data into the
+database container, as well as the most conservative of bandwidth.
+Since we're storing the data locally and mounting it with the
+**VOLUME** command, you can destroy and recreate the Datomic container
+without having to download the data each time.
 
 ##  The MIT License (MIT)
 

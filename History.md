@@ -1,4 +1,11 @@
 
+0.9.5385-alpine / 2016-07-22
+============================
+
+50% image size reduction
+Now based (transitively) on official clojure/alpine image
+Fixed console image name
+
 0.9.5385 / 2016-06-29
 ==================
 
