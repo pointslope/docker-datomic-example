@@ -25,7 +25,7 @@ You'll need Docker and Docker Compose. The easiest way to get these is:
 
 ##  Obligatory Word of Caution
 
-This is a **sample** repository, crafted for a specific, didactic
+This is a **sample** repository crafted for a specific didactic
 purpose. Please think carefully about the security and licensing
 issues associated with storing sensitive information in configuration
 files and use your best judgement before pushing sensitive information
