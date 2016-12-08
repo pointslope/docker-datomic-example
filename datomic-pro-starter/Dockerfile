@@ -1,4 +1,4 @@
-FROM pointslope/datomic-pro-starter:0.9.5394
+FROM pointslope/datomic-pro-starter:0.9.5544
 
 CMD ["config/dev-transactor.properties"]
 

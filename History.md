@@ -1,8 +1,13 @@
 
+0.9.5544 / 2016-12-08
+==================
+Updated to Datomic 0.9.5544
+Added bump script
+Fixed incorrectly named console image
+
 0.9.5394 / 2016-08-16
 ==================
 Updated to Datomic 0.9.5394
-
 
 0.9.5390 / 2016-08-10
 ==================
